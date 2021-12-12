@@ -72,6 +72,20 @@ int	ft_stack_min_place(t_list stack)
 	return (i);
 }
 
+t_list	*ft_fillstack(int ac, char **list)
+{
+	t_list	*stack;
+	int		i;
+
+	i = 1;
+	stack = NULL;
+	if (ac == 1)
+		ft_error();
+	while (i < ac)
+		ft_lstadd_back(&stack, ft_lstnew((void *) ft_atol(list[i++])));
+	return (stack);
+}
+
 void	ft_top(t_list **stack, int index, char c)
 {
 	int	i;

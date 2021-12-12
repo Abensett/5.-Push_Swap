@@ -1,12 +1,12 @@
 #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    Makesrc/file                                           :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: abensett <marvin@42.src/fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/25 13:38:46 by abensett          #+#    #+#              #
-#    Updated: 2021/06/10 11:30:38 by abensett         ###   ########.src/fr        #
+#    Updated: 2021/12/12 20:00:10 by abensett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -86,6 +86,7 @@ all:		$(NAME)
 
 $(NAME):	$(OBJS) 
 			@ar rc $(NAME) $(OBJS)
+			@printf "\n[$(GREEN)OK$(WHITE)] $(NAME)📙 generated \n"
 
 bonus:		$(OBJSBONUS)
 			@ar rc $(NAME) $(OBJSBONUS)

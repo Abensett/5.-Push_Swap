@@ -6,7 +6,7 @@
 #    By: abensett <abensett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/23 22:08:35 by abensett          #+#    #+#              #
-#    Updated: 2021/12/12 03:05:39 by abensett         ###   ########.fr        #
+#    Updated: 2021/12/12 21:38:43 by abensett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,16 +19,32 @@ SRC =	ft_errorshandler.c \
 		ft_ps_commands.c \
 		ft_ps_sort_utils.c \
 		ft_ps_sort.c \
+
+BSRC = 	ft_errorshandler.c \
+		ft_ps_utils.c \
+		ft_ps_commands.c \
+		ft_checker.c \
+		ft_ps_sort_utils.c \
+		ft_ps_sort.c \
+		ft_get_next_line.c \
 		
 		
 		
-OBJ= $(SRC:.c=.o)
+OBJ = $(SRC:.c=.o)
+BOBJ = $(BSRC: .c=.o)
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -I ./includes/
 
 EXEC = push_swap
 
 all:			$(EXEC)
+
+bonus: push_swap checker
+
+checker: $(BOBJ) libft
+	gcc -o $@ $(BOBJ) -Llibft -lft
+	@printf "\n[$(GREEN)OK$(WHITE)] checker generated\n"
+
 
 $(EXEC) :	$(OBJ) 
 			@make -C libft

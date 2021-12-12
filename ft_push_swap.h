@@ -16,8 +16,9 @@
 # include "libft/libft.h"
 # include <unistd.h>
 # include <limits.h>
+# define BUFFER_SIZE 5
 
-/*errors in ft_errorshandler.c*/
+/*ERRORS in ft_errorshandler.c*/
 void	ft_error(void);
 int		ft_checkdigit(int ac, char **av);
 int		ft_checkduplint(t_list stack);
@@ -27,7 +28,6 @@ int		ft_check_max_int(t_list stack);
 long	ft_stack_min(t_list stack);
 long	ft_stack_max(t_list stack);
 int		ft_stack_min_place(t_list stack);
-int		ft_stack_max_place(t_list stack);
 
 /*ft_ps_commands.c*/
 void	ft_s(t_list **stack1, t_list **stack2);
@@ -39,8 +39,8 @@ void	ft_cleanrrr(char **cmds);
 void	ft_cmd(char *cmd, t_list **stack_1, t_list **stack_2, int x);
 
 /*ft_sort_utils.c*/
-int		stack_idx_mid(t_list *stack, int num);
-int		stack_idx_minmax(t_list *stack, int num);
+int		ft_find_place(t_list *stack, int num);
+int		ft_find_place_maxmin(t_list *stack, int num);
 void	ft_find_min(t_list *stack_a, t_list *stack_b, int *a, int *b);
 void	ft_rr_same(t_list **stack_a, t_list **stack_b, int a, int b);
 void	ft_rr_diff(t_list **stack_a, t_list **stack_b, int a, int b);
@@ -54,5 +54,8 @@ void	ft_top(t_list **stack, int nb, char c);
 /*ft_push_swap.c*/
 t_list	*ft_fillstack(int ac, char **list);
 int		main(int ac, char **av);
+
+/*bonus */
+char	*get_next_line(char **str);
 
 #endif

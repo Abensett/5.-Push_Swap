@@ -93,12 +93,12 @@ void	ft_cmd(char *cmd, t_list **stack_1, t_list **stack_2, int times)
 		f_cmd = &ft_r;
 	else
 		f_cmd = &ft_rr;
-	while (times-- > 0)
+	while (x-- > 0)
 	{
 		if (f_cmd != ft_p && stack_2)
 			f_cmd(stack_2, 0);
 		f_cmd(stack_1, stack_2);
-		if (x > 0)
+		if (times > 0)
 			ft_putendl_fd(cmd, 1);
 	}
 }

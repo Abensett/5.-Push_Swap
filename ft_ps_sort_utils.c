@@ -12,7 +12,7 @@
 
 #include "ft_push_swap.h"
 
-int	stack_idx_mid(t_list *stack, int num)
+int	ft_find_place(t_list *stack, int num)
 {
 	int			current;
 	int			next;
@@ -36,7 +36,7 @@ int	stack_idx_mid(t_list *stack, int num)
 	return (ret);
 }
 
-int	stack_idx_minmax(t_list *stack, int num)
+int	ft_find_place_maxmin(t_list *stack, int num)
 {
 	int			ret;
 	int			x;
@@ -73,9 +73,9 @@ void	ft_find_min(t_list *stack_a, t_list *stack_b, int *a, int *b)
 	{
 		num = (long)(stack_b->content);
 		if (num < ft_stack_min(*stack_a) || num > ft_stack_max(*stack_a))
-			i = stack_idx_minmax(stack_a, num);
+			i = ft_find_place_maxmin(stack_a, num);
 		else
-			i = stack_idx_mid(stack_a, num);
+			i = ft_find_place(stack_a, num);
 		j = x;
 		if (x >= (size_b + 1) / 2)
 			j = -1 * (size_b - x);
