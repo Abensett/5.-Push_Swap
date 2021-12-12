@@ -1,0 +1,125 @@
+Start script
+---Push_swap identité---
+
+Test:0 ARGS: 
+
+Naked output
+
+checker output
+my checker output
+./basic_test.sh: line 20: ./checker_scarboni: No such file or directory
+
+Test:1 ARGS: 42
+
+Naked output
+
+checker output
+OK
+my checker output
+./basic_test.sh: line 20: ./checker_scarboni: No such file or directory
+
+Test:2 ARGS: 0 1 2 3
+
+Naked output
+
+checker output
+OK
+my checker output
+./basic_test.sh: line 20: ./checker_scarboni: No such file or directory
+
+Test:3 ARGS: 0 1 2 3 4 5 6 7 8 9
+
+Naked output
+
+checker output
+OK
+my checker output
+./basic_test.sh: line 20: ./checker_scarboni: No such file or directory
+
+---Push_swap tests simples---
+
+Test:4 ARGS: 2 1 0
+
+Naked output
+ra
+sa
+checker output
+OK
+my checker output
+./basic_test.sh: line 20: ./checker_scarboni: No such file or directory
+
+---Push_swap d'autres tests tout aussi simples---
+
+Test:5 ARGS: 1 5 2 4 3
+
+Naked output
+pb
+pb
+sa
+ra
+pa
+ra
+pa
+checker output
+OK
+my checker output
+./basic_test.sh: line 20: ./checker_scarboni: No such file or directory
+
+---Push_swap tests intermédiairs---
+
+Test:6 ARGS: 100 PARAMS AU CHOIX
+
+Naked output
+
+checker output
+Error
+my checker output
+./basic_test.sh: line 20: ./checker_scarboni: No such file or directory
+
+---Push_swap tests avancé---
+
+Test:7 ARGS: 500 PARAMS AU CHOIX
+
+Naked output
+
+checker output
+Error
+my checker output
+./basic_test.sh: line 20: ./checker_scarboni: No such file or directory
+
+---Push_swap tests PERSOS---
+
+Test:8 ARGS: 4 67 3 87 23
+
+Naked output
+pb
+pb
+sa
+ra
+rra
+pa
+rra
+pa
+rra
+checker output
+OK
+my checker output
+./basic_test.sh: line 20: ./checker_scarboni: No such file or directory
+
+Test:9 ARGS: 2 1
+
+Naked output
+sa
+checker output
+OK
+my checker output
+./basic_test.sh: line 20: ./checker_scarboni: No such file or directory
+
+Test:10 ARGS: 1 2
+
+Naked output
+
+checker output
+OK
+my checker output
+./basic_test.sh: line 20: ./checker_scarboni: No such file or directory
