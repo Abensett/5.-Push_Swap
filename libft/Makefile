@@ -1,12 +1,12 @@
 #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
+#    Makesrc/file                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: abensett <marvin@42.src/fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/25 13:38:46 by abensett          #+#    #+#              #
-#    Updated: 2021/12/12 20:00:10 by abensett         ###   ########.fr        #
+#    Updated: 2021/06/10 11:30:38 by abensett         ###   ########.src/fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,6 +67,7 @@ SRCBONUS = src/ft_lstnew.c \
 	  src/ft_lstdelone.c \
 	  src/ft_lstclear.c \
 	  src/ft_lstiter.c \
+	  src/ft_lstfree.c \
 	  src/ft_lstmap.c \
 	  src/ft_lst_int_print.c \
 	  src/ft_lst_int_search.c \
@@ -90,6 +91,7 @@ $(NAME):	$(OBJS)
 
 bonus:		$(OBJSBONUS)
 			@ar rc $(NAME) $(OBJSBONUS)
+			@printf "\n[$(GREEN)OK$(WHITE)] $(NAME)📙🅱  generated \n"
 .c.o:
 			@printf "\033[2K\r $(_YELLOW)Compiling $< $(_END)⌛"
 			@gcc -Wall -Wextra -Werror -c $< -o $(<:.c=.o)
@@ -98,7 +100,7 @@ clean:
 			@rm -rf $(OBJS)	$(OBJSBONUS)
 			@printf "\n[$(GREEN)cleaned$(WHITE)] .o src/FILES \n"
 
-src/fclean:		clean
+fclean:		clean
 			@rm -rf $(NAME) 
 			@printf "\n[$(GREEN)cleaned$(WHITE)] $(NAME) \n"
 

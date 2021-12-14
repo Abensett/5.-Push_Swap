@@ -81,7 +81,7 @@ t_list	*ft_fillstack(int ac, char **list)
 	stack = NULL;
 	if (ac == 1)
 		ft_error();
-	while (i < ac)
+	while (i < ac - 1)
 		ft_lstadd_back(&stack, ft_lstnew((void *) ft_atol(list[i++])));
 	return (stack);
 }

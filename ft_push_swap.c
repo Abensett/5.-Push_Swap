@@ -15,14 +15,22 @@
 int	main(int ac, char **av)
 {
 	t_list	*stack_a;
+	int		i;
 
 	if (ac == 1)
 		return (0);
-	stack_a = ft_fillstack(ac, av);
+	stack_a = NULL;
+	i = 1;
+	while (i < ac)
+		ft_lstadd_back(&stack_a, ft_lstnew((void *)ft_atol(av[i++])));
 	if (ft_checkdigit(ac, av)
 		|| ft_checkduplint(*stack_a) || ft_check_max_int(*stack_a))
+	{
+		ft_lstfree(stack_a);
 		ft_error();
+	}
 	if (!ft_lst_int_check_order(*stack_a))
 		ft_sort(&stack_a);
+	ft_lstfree(stack_a);
 	return (0);
 }
