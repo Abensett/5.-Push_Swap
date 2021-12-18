@@ -6,7 +6,7 @@
 #    By: abensett <abensett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/23 22:08:35 by abensett          #+#    #+#              #
-#    Updated: 2021/12/18 17:09:29 by abensett         ###   ########.fr        #
+#    Updated: 2021/12/18 17:20:16 by abensett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,8 +63,8 @@ clean:
 
 
 fclean:			clean
-				@rm -f $(EXEC) libft/libft.a
-				@printf "\n[$(GREEN)cleaned$(WHITE)] $(EXEC) and libft.a \n"
+				@rm -f $(EXEC) checker libft/libft.a
+				@printf "\n[$(GREEN)cleaned$(WHITE)] $(EXEC), checker and libft.a \n"
 
 re:				fclean all
 
