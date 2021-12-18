@@ -75,6 +75,7 @@ SRCBONUS = src/ft_lstnew.c \
 	  src/ft_lst_int_occurence.c \
 	  src/ft_lst_int_check_order.c \
 	  src/ft_lst_get_median.c \
+	  src/ft_lst_long_check_order.c \
 	  src/ft_lst_long_fill.c \
 	  src/ft_lst_str_print.c \
 	

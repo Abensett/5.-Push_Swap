@@ -25,7 +25,7 @@ int	main(int ac, char **av)
 		ft_lstfree(stack_a);
 		ft_error();
 	}
-	if (!ft_lst_int_check_order(*stack_a))
+	if (!ft_lst_long_check_order(*stack_a))
 		ft_sort(&stack_a);
 	ft_lstfree(stack_a);
 	return (0);

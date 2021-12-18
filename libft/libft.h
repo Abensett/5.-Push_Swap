@@ -6,7 +6,7 @@
 /*   By: abensett <abensett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 15:05:19 by abensett          #+#    #+#             */
-/*   Updated: 2021/12/14 21:25:19 by abensett         ###   ########.fr       */
+/*   Updated: 2021/12/18 19:15:43 by abensett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -188,6 +188,9 @@ int			ft_lst_int_search_index(t_list list, int nb);
 int			ft_lst_int_occurence(t_list list, long nb);
 /*check if list is in anscending order*/
 int			ft_lst_int_check_order(t_list list);
+/*check if list is in anscending order*/
+int			ft_lst_long_check_order(t_list list);
+
 /*return lst filled with a longs thanks to a given str(separated by spaces)*/
 t_list		*ft_lst_long_fill(int ac, char **list);
 

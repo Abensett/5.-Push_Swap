@@ -6,7 +6,7 @@
 /*   By: abensett <abensett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/12 21:12:25 by abensett          #+#    #+#             */
-/*   Updated: 2021/12/18 17:39:30 by abensett         ###   ########.fr       */
+/*   Updated: 2021/12/18 19:17:04 by abensett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void	ft_sort_check(t_list **stack_a)
 		}
 		free(cmd);
 	}
-	if (!ft_lstsize(stack_b) && ft_lst_int_check_order(**stack_a))
+	if (!ft_lstsize(stack_b) && ft_lst_long_check_order(**stack_a))
 		ft_putendl_fd("OK", 1);
 	else
 		ft_putendl_fd("KO", 1);
