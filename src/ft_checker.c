@@ -6,7 +6,7 @@
 /*   By: abensett <abensett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/12 21:12:25 by abensett          #+#    #+#             */
-/*   Updated: 2021/12/18 17:38:39 by abensett         ###   ########.fr       */
+/*   Updated: 2021/12/18 17:39:30 by abensett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,11 +78,11 @@ int	main(int ac, char **av)
 		if (ft_checkdigit(ac, av) || ft_checkduplint(*stack)
 			|| ft_check_max_int(*stack))
 		{
-			ft_lstfree(stack_a);
+			ft_lstfree(stack);
 			ft_error();
 		}
 		ft_sort_check(&stack);
-		ft_lstfree(stack_a);
+		ft_lstfree(stack);
 	}
 	return (0);
 }
