@@ -193,7 +193,7 @@ Avant de programmer la méthode de résolution go initialiser des t_list qui von
         variables : int **a,b**  t_list *stack_**b**
         
 
-***“[Diviser pour reigner"](https://www.notion.so/Quotes-7cf2245925914f77be15486d95dbe873)*** → quicksort, fusion sort
+***“[Diviser pour reigner"]*** → quicksort, fusion sort
 
 En informatique les mots *tri* et *trier* sont à prendre avec le sens de *classement* et *classer*.
 
