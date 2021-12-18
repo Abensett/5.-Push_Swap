@@ -6,26 +6,20 @@
 /*   By: abensett <abensett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/12 21:12:25 by abensett          #+#    #+#             */
-/*   Updated: 2021/12/14 21:44:14 by abensett         ###   ########.fr       */
+/*   Updated: 2021/12/18 17:05:53 by abensett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_push_swap.h"
+#include "../ft_push_swap.h"
 
-static int	ps_error(void)
-{
-	ft_putendl_fd("Error", 2);
-	return (1);
-}
-
-static int	parse(char *str, t_list **stack_1, t_list **stack_2)
+int	ft_apply_cmds(char *str, t_list **stack_1, t_list **stack_2)
 {
 	int	len;
 	int	(*f)(const char *, const char *, size_t);
 
 	len = ft_strlen(str);
 	if (len < 3 || len > 4)
-		return (ps_error());
+		ft_error();
 	str[len - 1] = 0;
 	len = ft_strlen(str);
 	f = &ft_strncmp;
@@ -41,26 +35,26 @@ static int	parse(char *str, t_list **stack_1, t_list **stack_2)
 	else if (!f(str, "pa", 2))
 		ft_cmd(str, stack_2, stack_1, -1);
 	else
-		return (ps_error());
+		ft_error();
 	return (0);
 }
 
-static void	sort_check(t_list **stack_a)
+void	ft_sort_check(t_list **stack_a)
 {
+	static char	*str;
 	char		*cmd;
 	t_list		*stack_b;
-	static char	*str;
 
 	stack_b = 0;
 	while (1)
 	{
-		cmd = get_next_line(&str);
-		if (!cmd || !ft_strlen(cmd))
+		cmd = ft_get_next_line(&str);
+		if (!ft_strlen(cmd) || !cmd)
 		{
 			free(cmd);
 			break ;
 		}
-		if (parse(cmd, stack_a, &stack_b))
+		if (ft_apply_cmds(cmd, stack_a, &stack_b))
 		{
 			free(str);
 			free(cmd);
@@ -68,7 +62,7 @@ static void	sort_check(t_list **stack_a)
 		}
 		free(cmd);
 	}
-	if (ft_lst_int_check_order(**stack_a) && !ft_lstsize(stack_b))
+	if (!ft_lstsize(stack_b) && ft_lst_int_check_order(**stack_a))
 		ft_putendl_fd("OK", 1);
 	else
 		ft_putendl_fd("KO", 1);
@@ -84,7 +78,7 @@ int	main(int ac, char **av)
 		if (ft_checkdigit(ac, av) || ft_checkduplint(*stack)
 			|| ft_check_max_int(*stack))
 			ft_error();
-		sort_check(&stack);
+		ft_sort_check(&stack);
 	}
 	return (0);
 }

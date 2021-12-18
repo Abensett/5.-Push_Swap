@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lst_get_median.c                                :+:      :+:    :+:   */
+/*   ft_push_swap.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abensett <abensett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/12 17:22:18 by abensett          #+#    #+#             */
-/*   Updated: 2021/11/12 17:22:18 by abensett         ###   ########.fr       */
+/*   Created: 2021/10/22 18:12:01 by abensett          #+#    #+#             */
+/*   Updated: 2021/10/22 18:12:01 by abensett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../ft_push_swap.h"
 
-long	ft_lst_get_median(t_list list)
+int	main(int ac, char **av)
 {
-	t_list	*tmp ;
-	long	*tab;
-	int		i;
+	t_list	*stack_a;
 
-	i = 0;
-	tab = malloc(ft_lstsize(&list) * sizeof(long));
-	tmp = &list;
-	while (tmp)
+	if (ac == 1)
+		return (0);
+	stack_a = ft_fillstack(ac, av);
+	if (ft_checkdigit(ac, av)
+		|| ft_checkduplint(*stack_a) || ft_check_max_int(*stack_a))
 	{
-		tab[i++] = (long)(tmp->content);
-		tmp = tmp->next;
+		ft_lstfree(stack_a);
+		ft_error();
 	}
-	return (tab[ft_lstsize(&list) / 2]);
+	if (!ft_lst_int_check_order(*stack_a))
+		ft_sort(&stack_a);
+	ft_lstfree(stack_a);
+	return (0);
 }

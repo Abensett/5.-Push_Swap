@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_push_swap.h"
+#include "../ft_push_swap.h"
 
 long	ft_stack_min(t_list stack)
 {
@@ -81,7 +81,7 @@ t_list	*ft_fillstack(int ac, char **list)
 	stack = NULL;
 	if (ac == 1)
 		ft_error();
-	while (i < ac - 1)
+	while (i < ac)
 		ft_lstadd_back(&stack, ft_lstnew((void *) ft_atol(list[i++])));
 	return (stack);
 }

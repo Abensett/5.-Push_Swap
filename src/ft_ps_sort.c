@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_push_swap.h"
+#include "../ft_push_swap.h"
 
 void	ft_easy_sorting(t_list **stack_a)
 {

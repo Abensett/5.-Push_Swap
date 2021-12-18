@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_push_swap.h"
+#include "../ft_push_swap.h"
 
 void	ft_error(void)
 {

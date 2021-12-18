@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_push_swap.h"
+#include "../ft_push_swap.h"
 
 /*SWAP F2:push the swap the first two elements of stack*/
 void	ft_s(t_list **stack1, t_list **stack2)

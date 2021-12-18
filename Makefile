@@ -6,27 +6,27 @@
 #    By: abensett <abensett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/23 22:08:35 by abensett          #+#    #+#              #
-#    Updated: 2021/12/12 21:38:43 by abensett         ###   ########.fr        #
+#    Updated: 2021/12/18 17:09:29 by abensett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 GREEN   = \033[1;32m
 WHITE   = \033[0;m
 
-SRC =	ft_errorshandler.c \
-		ft_push_swap.c \
-		ft_ps_utils.c \
-		ft_ps_commands.c \
-		ft_ps_sort_utils.c \
-		ft_ps_sort.c \
+SRC =	src/ft_errorshandler.c \
+		src/ft_push_swap.c \
+		src/ft_ps_utils.c \
+		src/ft_ps_commands.c \
+		src/ft_ps_sort_utils.c \
+		src/ft_ps_sort.c \
 
-BSRC = 	ft_errorshandler.c \
-		ft_ps_utils.c \
-		ft_ps_commands.c \
-		ft_checker.c \
-		ft_ps_sort_utils.c \
-		ft_ps_sort.c \
-		ft_get_next_line.c \
+BSRC = 	src/ft_errorshandler.c \
+		src/ft_ps_utils.c \
+		src/ft_ps_commands.c \
+		src/ft_checker.c \
+		src/ft_ps_sort_utils.c \
+		src/ft_ps_sort.c \
+		src/ft_get_next_line.c \
 		
 		
 		
@@ -53,7 +53,7 @@ $(EXEC) :	$(OBJ)
 			$(CC) -o $@ $^ libft/libft.a
 			@printf "\n[$(GREEN)OK$(WHITE)] $(EXEC) generated\n"
 
-%.o:%.c	
+.o:.c	
 				@$(CC) -c $(CFLAGS) $?
 
 clean:
