@@ -6,7 +6,7 @@
 #    By: abensett <abensett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/23 22:08:35 by abensett          #+#    #+#              #
-#    Updated: 2021/12/18 17:20:16 by abensett         ###   ########.fr        #
+#    Updated: 2021/12/19 12:46:50 by abensett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ BSRC = 	src/ft_errorshandler.c \
 OBJ = $(SRC:.c=.o)
 BOBJ = $(BSRC: .c=.o)
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -I ./includes/
+CFLAGS = -Wall -Wextra -Werror
 
 EXEC = push_swap
 
