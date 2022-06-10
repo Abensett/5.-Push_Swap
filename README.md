@@ -202,3 +202,6 @@ En informatique les mots *tri* et *trier* sont à prendre avec le sens de *
 - First try : HUNKS 750
 - Second try : 900 ordering when pushing  median
 - **Third try : Push all except 3 then push back the one that needs the fewer moves**
+***
+
+## 42 Project 125/100
