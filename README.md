@@ -1,9 +1,10 @@
 # Push_Swap
 Sorting in an ascending order a Stack A, only using  4 types of commands and another Stack B
+
+<details>
+    <summary>Cheminement</summary>
 - ***LEXICO***
-    - Complexité
-        
-        la *quantité de ressources* (temps, espace mémoire, etc.) dont a besoin un [algorithme](https://fr.wikipedia.org/wiki/Algorithme) pour résoudre un *[problème algorithmique](https://fr.wikipedia.org/wiki/Probl%C3%A8me_algorithmique)*
+    - Complexité :la *quantité de ressources* (temps, espace mémoire, etc.) dont a besoin un [algorithme](https://fr.wikipedia.org/wiki/Algorithme) pour résoudre un *[problème algorithmique](https://fr.wikipedia.org/wiki/Probl%C3%A8me_algorithmique)*
         
 
 # **GOAL** :
@@ -202,6 +203,7 @@ En informatique les mots *tri* et *trier* sont à prendre avec le sens de *
 - First try : HUNKS 750
 - Second try : 900 ordering when pushing  median
 - **Third try : Push all except 3 then push back the one that needs the fewer moves**
+    </details>
 ***
 
 ## 42 Project 125/100
