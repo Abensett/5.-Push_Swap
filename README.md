@@ -3,8 +3,7 @@ Sorting in an ascending order a Stack A, only using  4 types of commands and ano
 
 <details>
     <summary>Cheminement</summary>
-- ***LEXICO***
-    - Complexité :la *quantité de ressources* (temps, espace mémoire, etc.) dont a besoin un [algorithme](https://fr.wikipedia.org/wiki/Algorithme) pour résoudre un *[problème algorithmique](https://fr.wikipedia.org/wiki/Probl%C3%A8me_algorithmique)*
+    - Complexité :la quantité de ressources (temps, espace mémoire, etc.) dont a besoin un algorithme (https://fr.wikipedia.org/wiki/Algorithme) pour résoudre un problème algorithmique (https://fr.wikipedia.org/wiki/Probl%C3%A8me_algorithmique)
         
 
 # **GOAL** :
